@@ -1,0 +1,56 @@
+{% extends 'Quiz/dependencies.html' %}
+
+{% block content %}
+
+<style>
+    body {
+  background-color: #121212;
+  color: #f2f2f2;
+  font-family: sans-serif;
+}
+
+.card {
+  background-color: #1c1c1c;
+  color: #f2f2f2;
+  border: 2px solid #f2f2f2;
+}
+
+.card-title {
+  color: #f2f2f2;
+}
+
+.card-text {
+  color: #f2f2f2;
+}
+
+.btn-primary {
+  background-color: #f2f2f2;
+  color: #121212;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #e0e0e0;
+}
+</style>
+
+<div class="container ">
+        
+    <div class="card-columns" style="padding: 10px; margin: 20px;">
+        <div class="card" align="centre " style="width: 32rem; border:5px black solid">
+            <div class="card-body">
+                <h5 class="card-title">Score: {{score}}</h5>
+
+                <p class="card-text">Puntuacion: {{percent}}%</p>
+                <p class="card-text">Tiempo que tomo en completar: {{time}} seconds</p>
+                <p class="card-text">Aciertos: {{correct}}</p>
+                <p class="card-text">Errores: {{wrong}}</p>
+                <p class="card-text">Total de preguntas: {{total}}</p>
+                <h5>Suerte en el proximo examen!</h5>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
